@@ -1,0 +1,54 @@
+.ad-container {
+  display: flex;
+  justify-content: center;
+  margin: 15rem 15rem 10rem 15rem;
+  gap: 50px;
+  background-color: rgb(231, 0, 0);
+}
+
+.ad-box {
+  margin: 35px 15px 35px 42px;
+}
+
+.ad-icon {
+  color: white;
+  font-size: 45px;
+  margin-bottom: 20px;
+}
+.ad-box h6 {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+}
+.ad-box p {
+  font-size: 19px;
+  font-weight: 500;
+  color: rgb(216, 216, 216);
+  line-height: 35px;
+  margin-bottom: 20px;
+  font-family: 'Roboto', sans-serif;
+}
+
+@media screen and (max-width: 1025px) {
+    .ad-container {
+        margin: 13rem 4rem 10rem 4rem;
+        gap: 40px;
+    }
+    .ad-icon {
+        font-size: 30px;
+        margin-bottom: 17px;
+    }
+    .ad-box h6 {
+        font-size: 18px;
+        font-weight: 600;
+        margin-bottom: 17px;
+    }
+    .ad-box p {
+        font-size: 17px;
+        font-weight: 400;
+        line-height: 25px;
+        margin-bottom: 10px;
+    }
+}

@@ -1,0 +1,94 @@
+.footer {
+  margin: 5rem 15rem;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 7rem;
+}
+
+.footer-logo {
+  margin-bottom: 30px;
+}
+.footer-box:first-child p {
+  font-size: 19px;
+  font-weight: 400;
+  line-height: 30px;
+  color: rgb(143, 143, 143);
+  font-family: 'Roboto', sans-serif;
+  width: 300px;
+}
+.footer-box:first-child p:hover {
+  cursor: text;
+  color: rgb(143, 143, 143);
+  padding-left: 0;
+}
+
+.footer-box h6 {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.footer-box p {
+  line-height: 45px;
+  font-size: 17px;
+  cursor: pointer;
+  font-weight: 400;
+  color: rgb(143, 143, 143);
+  font-family: 'Roboto', sans-serif;
+}
+.footer-box p:hover {
+  color: rgba(255, 0, 0, 1);
+  padding-left: 4px;
+  transition: 0.3s ease-in-out;
+}
+
+.copyright {
+  display: flex;
+  justify-content: space-between;
+}
+.copyright-text p {
+  color: gray;
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.copyright-text span {
+  color: rgb(255, 35, 35);
+  cursor: pointer;
+}
+
+.copyright-icons {
+  display: flex;
+  gap: 22px;
+  cursor: pointer;
+  margin-top: 30px;
+}
+.copyright-icons .icon:hover {
+  color: red;
+  transform: scaleX(-1);
+  transition: 0.5s ease-in-out;
+}
+
+@media screen and (max-width: 1025px) {
+  .footer {
+    margin: 3rem 3rem;
+}
+.footer-container {
+  margin: 5rem 1rem;
+}
+.footer-box:first-child p {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 30px;
+}
+.footer-box p {
+  line-height: 38px;
+  font-size: 15px;
+}
+.copyright-text p {
+  font-size: 16px;
+  font-weight: 400;
+}
+}

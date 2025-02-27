@@ -1,0 +1,163 @@
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px 30px;
+  background-color: #fff;
+  transition: all 1s ease-in-out;
+}
+
+.sticky {
+  position: fixed;
+  top: -10px;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  box-shadow: 1px 6px 5px rgba(0, 0, 0, 0.1);
+  padding-top: 10px; /*Reduce padding on sticky */
+  transition: all 0.4s ease-in-out; /* Smooth transition */
+}
+
+.logo {
+  cursor: pointer;
+  width: 8.7rem;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  position: relative;
+  gap: 10px;
+}
+
+.nav-links li .link {
+  text-decoration: none;
+  padding: 55px 20px;
+  font-weight: 500;
+  color: #000;
+  font-size: 17px;
+}
+.nav-links li .link:hover {
+  color: red;
+  transition: 0.5s;
+}
+
+.hot {
+  position: absolute;
+  bottom: 22px;
+  left: 21.5rem;
+  background-color: #ff003c;
+  color: #fff;
+  font-size: 11px;
+  letter-spacing: 0.8px;
+  font-weight: 500;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  padding: 8px 8px 4px 8px;
+  border-radius: 8px;
+}
+
+.submenu {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  gap: 20px;
+  top: 4.4rem;
+  border-top: 4px solid #ff003c;
+  border-radius: 7px 7px 4px 4px;
+  padding: 30px 40px 30px 15px;
+  background-color: #fff;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+
+  /* Transition properties */
+  opacity: 0;
+  transform: translateY(-10px);
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.up {
+  color: #ff003c;
+  position: absolute;
+  top: -16.3px;
+  left: 20px;
+  font-size: 20px;
+}
+
+.latest:hover .submenu {
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible;
+  pointer-events: auto;
+}
+.blog:hover .submenu {
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible;
+  pointer-events: auto;
+  padding: 30px 50px 30px 15px;
+}
+.pages:hover .submenu {
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible;
+  pointer-events: auto;
+  padding: 30px 20px 30px 15px;
+}
+
+.submenu-link {
+  padding: 20px 3px;
+  text-decoration: none;
+  font-weight: 500;
+  color: #000;
+  font-size: 17px;
+}
+.submenu-link:hover {
+  color: red;
+  transition: 0.3s;
+}
+
+.accounts {
+  display: flex;
+  gap: 40px;
+  font-size: 23px;
+  padding-right: 30px;
+}
+.icon {
+  cursor: pointer;
+}
+
+.hamburger{
+  display: none;
+}
+
+
+@media screen and (max-width: 1025px){
+  nav {
+    padding: 50px 20px;
+  }
+  .nav-links {
+    gap: 0px;
+  }
+  .nav-links li .link {
+    padding: 55px 15px;
+  }
+  .accounts {
+    display: flex;
+    gap: 35px;
+    font-size: 23px;
+    padding-right: 20px;
+  }
+}
+
+@media screen and (max-width: 768px){
+  .nav-links{
+    flex-direction: column;
+    position: absolute;
+
+    gap: 20px;
+  }
+  .hot{
+    display: none ;
+  }
+}

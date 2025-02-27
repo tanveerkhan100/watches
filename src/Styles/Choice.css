@@ -1,0 +1,72 @@
+.choice {
+  margin: 5rem 15rem;
+  display: flex;
+  flex-direction: column;
+  gap: 13rem;
+}
+
+.choice .container {
+  display: flex; 
+  justify-content: center;
+  gap: 10rem;
+  align-items: center;
+}
+
+.choice-text {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+.choice-text h2 {
+  font-weight: 900;
+  font-size: 3.7rem;
+}
+.choice-text p {
+  line-height: 34px;
+  font-size: 21px;
+  color: rgb(82, 82, 82);
+}
+.show-btn {
+  width: 230px;
+  height: 60px;
+  border: none;
+  outline: none;
+  font-size: 17px;
+  color: white;
+  background: linear-gradient(to right, #4a4a4b 50%, red 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+  transition: all 0.5s ease-out;
+}
+.show-btn:hover {
+  background-position: left bottom;
+  cursor: pointer;
+}
+
+.choice-image {
+  width: 1400px;
+}
+
+
+
+@media screen and (max-width: 1025px){
+  .choice {
+    margin: 5rem 6rem;
+}
+.choice .container {
+  gap: 6rem;
+}
+.choice-text {
+  gap: 46px;
+}
+.choice-text h2 {
+  font-size: 2.5rem;
+}
+.choice-text p {
+  line-height: 31px;
+  font-size: 19px;
+}
+.choice-image {
+  width: 400px;
+}
+}
