@@ -73,21 +73,21 @@ cursor: pointer;
     }
 }
 
-@media screen and (max-width: 1025px){
+@media screen and (max-width: 1200px){
     .hero-text{
-        padding: 0 0 0 5rem;
+        padding: 0 0 0 2rem;
     }
     h1{
-        font-size: 5.5rem;
-        line-height: 7rem;
+        font-size: 4rem;
+        line-height: 5.5rem;
     }
     .watch {
-        width: 73%;
+        width: 102%;
         height: 59vh;
     }
 }
     .watch-image {
-        padding-right: 17rem;
+        padding-right: 15rem;
         margin-left: 5rem;
     }
     @keyframes zoom {
@@ -97,6 +97,36 @@ cursor: pointer;
         50% {
             transform: translate(-50%, -50%) scale(0.85);
         }
+    }
+
+    @media screen and (max-width: 812px){
+        .hero-text{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .watch {
+            display: none;
+        }
+
+        .hero-text{
+            padding: 4rem 1rem;
+        }
+        h1{
+            font-size: 2.5rem;
+            text-align: center;
+            line-height: 2.9rem;
+        }
+        .home p{
+            padding-right: 0;
+            text-align: center;
+            line-height: 26px;
+            font-weight: 500;
+            font-size: 17px;
+            margin: 2rem 0px 3rem 0;
+        }
+        
     }
 
 

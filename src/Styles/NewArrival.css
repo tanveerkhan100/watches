@@ -6,9 +6,15 @@
   display: flex;
   gap: 30px;
   justify-content: center;
+
+  
 }
 .image-box {
   width: 25.2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .img-container {
   width: 25.2rem;
@@ -50,5 +56,22 @@ h4 {
   }
   .img-container {
     height: 29rem;
+  }
+}
+
+@media screen and (max-width: 812px){
+  .new-arrival {
+    margin: 8rem 2rem;
+    text-align: center;
+  }
+  .image-container {
+    flex-wrap: wrap;
+  }
+  .image-box {
+    width: 25.2rem;
+    margin-bottom: 2rem;
+  }
+  h4 {
+    font-size: 20px;
   }
 }

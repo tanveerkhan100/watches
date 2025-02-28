@@ -12,7 +12,7 @@ const Video = () => {
     setShowModal((prev) => !prev);
   };
   return (
-    <div>
+    <div className='video'>
       <div className='video-container'>
         <img src={image} alt='img' />
         <div className='play-button'>

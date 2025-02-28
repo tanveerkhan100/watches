@@ -92,3 +92,23 @@
   font-weight: 400;
 }
 }
+
+@media screen and (max-width: 812px){
+  .footer {
+    margin: 5rem 0.5rem;
+  }
+  .footer-container {
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: 4rem;
+  }
+
+  .copyright {
+    margin: 0.8rem;
+    flex-wrap: wrap;
+  }
+  .copyright-icons {
+    gap: 18px;
+    font-size: 15px;
+  }
+}

@@ -69,7 +69,6 @@ nav {
   background-color: #fff;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 
-  /* Transition properties */
   opacity: 0;
   transform: translateY(-10px);
   visibility: hidden;
@@ -127,12 +126,15 @@ nav {
   cursor: pointer;
 }
 
-.hamburger{
+.hamburger {
   display: none;
+  position: absolute;
+  cursor: pointer;
+  right: 35px;
+  font-size: 20px;
 }
 
-
-@media screen and (max-width: 1025px){
+@media screen and (max-width: 1025px) {
   nav {
     padding: 50px 20px;
   }
@@ -150,14 +152,118 @@ nav {
   }
 }
 
-@media screen and (max-width: 768px){
-  .nav-links{
+@media screen and (max-width: 812px) {
+  nav {
+    padding: 20px 30px;
+  }
+
+  .logo {
+    width: 5rem;
+  }
+  .accounts {
+    font-size: 18px;
+  }
+
+  .hamburger {
+    display: block;
+    z-index: 100;
+  }
+  .cross {
+    color: white;
+  }
+  .nav-links {
     flex-direction: column;
     position: absolute;
-
-    gap: 20px;
+    top: 0;
+    right: -100%;
+    width: 60%;
+    z-index: 12;
+    padding: 110px 30px;
+    height: 100vh;
+    background-color: #fc272a;
+    gap: 30px;
+    transition: all 0.7s ease-in-out;
   }
-  .hot{
-    display: none ;
+
+  .nav-links li .link {
+    color: #fff;
+    padding: 5px 20px;
+  }
+  .nav-links li .link:hover {
+    color: white;
+    transition: 0.5s;
+  }
+  .nav-links.active {
+    top: 0;
+    right: 0;
+  }
+  .hot {
+    display: none;
+  }
+  .accounts {
+    padding-right: 53px;
+    gap: 19px;
+  }
+
+  .submenu {
+    position: relative;
+    display: none;
+    border-top: none;
+    gap: 10px;
+    top: 10px;
+    left: 40px;
+    visibility: visible;
+    padding: 5px;
+    background-color: transparent;
+    box-shadow: none;
+  }
+
+  .submenu.open {
+    display: flex;
+  }
+
+  .submenu-link {
+    color: #fff;
+    font-size: 15px;
+    font-weight: 400;
+  }
+
+
+  .latest {
+    display: none; /*display none of latest which is only for laptop screen in mob screen i have latest-sub*/
+  }
+  .blog{
+    display: none; /*same as latest*/
+  }
+  .pages{
+    display: none; /*same as latest*/
+  }
+
+  .latest-sub .submenu {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+  }
+  .blog-sub .submenu {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+  }
+  .pages-sub .submenu {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+  }
+}
+
+@media screen and (min-width: 812px){
+  .latest-sub{
+    display: none;
+  }
+  .blog-sub{
+    display: none;
+  }
+  .pages-sub{
+    display: none;
   }
 }
