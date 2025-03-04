@@ -1,0 +1,37 @@
+.about .text {
+  margin: 10rem 20rem;
+}
+.about h2 {
+  font-size: 30px;
+  color: rgb(29, 29, 29);
+  margin-bottom: 30px;
+  margin-top: 4rem;
+}
+.about h2::before {
+  content: '';
+  display: inline-block;
+  width: 50px;
+  background-color: red;
+  height: 2px;
+  margin-right: 15px;
+  vertical-align: middle;
+}
+
+.about .text p {
+  color: rgb(80, 80, 80);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 28px;
+}
+
+@media screen and (max-width: 1150px) {
+  .about .text {
+    margin: 7rem 10rem;
+  }
+}
+
+@media screen and (max-width: 815px){
+  .about .text {
+    margin: 7rem 2rem;
+  }
+}

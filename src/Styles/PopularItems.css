@@ -1,5 +1,5 @@
 .popular {
-  margin-top: 12rem;
+  margin-top: 0rem;
   margin-bottom: 12rem;
 }
 .popular-text {
@@ -99,7 +99,7 @@
   cursor: pointer;
 }
 
-@media screen and (max-width: 1025px) {
+@media screen and (max-width: 1200px) {
   .popular-text {
     margin: 0rem;
   }

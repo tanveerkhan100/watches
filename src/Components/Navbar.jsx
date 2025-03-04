@@ -41,13 +41,19 @@ const Navbar = () => {
         <img src={logo} alt='' className='logo' />
         <ul className={isOpen ? 'nav-links active' : 'nav-links'}>
           <li>
-            <Link className='link'>Home</Link>
+            <Link className='link' to='/' onClick={toggleMenu}>
+              Home
+            </Link>
           </li>
           <li>
-            <Link className='link'>Shop</Link>
+            <Link className='link' to='/shop' onClick={toggleMenu}>
+              Shop
+            </Link>
           </li>
           <li>
-            <Link className='link'>About</Link>
+            <Link className='link' onClick={toggleMenu} to='/about'>
+              About
+            </Link>
           </li>
           <li className='latest' onClick={() => toggleSubMenu('latest')}>
             <p className='hot'>HOT</p>
@@ -55,10 +61,14 @@ const Navbar = () => {
             <ul className={`submenu ${openSubMenu === 'latest' ? 'open' : ''}`}>
               <FaCaretUp className='up' />
               <li>
-                <Link className='submenu-link'>Product List</Link>
+                <Link className='submenu-link' to='/productList'>
+                  Product List
+                </Link>
               </li>
               <li>
-                <Link className='submenu-link'>Product Details</Link>
+                <Link className='submenu-link' to='/details'>
+                  Product Details
+                </Link>
               </li>
             </ul>
           </li>
@@ -84,88 +94,19 @@ const Navbar = () => {
               </li>
             </ul>
           </li>
-          <li className='blog'>
-            <Link className='link'>Blog</Link>
-            <ul className='submenu'>
-              <FaCaretUp className='up' />
-              <li>
-                <Link className='submenu-link'>Blog</Link>
-              </li>
-              <li>
-                <Link className='submenu-link'>Blog Details</Link>
-              </li>
-            </ul>
-          </li>
 
-          {/* its for mobile screen only  */}
-          <li className='blog-sub' onClick={() => toggleSubMenu('blog-sub')}>
-            <Link className='link'>Blog</Link>
-            <ul
-              className={`submenu ${openSubMenu === 'blog-sub' ? 'open' : ''}`}
-            >
-              {/* <FaCaretUp className='up' /> */}
-              <li>
-                <Link className='submenu-link'>Blog </Link>
-              </li>
-              <li>
-                <Link className='submenu-link'>Blog Details</Link>
-              </li>
-            </ul>
-          </li>
-          <li className='pages'>
-            <Link className='link'>Pages</Link>
-            <ul className='submenu'>
-              <FaCaretUp className='up' />
-              <li>
-                <Link className='submenu-link'>Log in</Link>
-              </li>
-              <li>
-                <Link className='submenu-link'>Cart</Link>
-              </li>
-              <li>
-                <Link className='submenu-link'>Element</Link>
-              </li>
-              <li>
-                <Link className='submenu-link'>Confirmation</Link>
-              </li>
-              <li>
-                <Link className='submenu-link'>Product Checkout</Link>
-              </li>
-            </ul>
-          </li>
-
-          {/* its for mobile screen only  */}
-          <li className='pages-sub' onClick={() => toggleSubMenu('pages-sub')}>
-            <Link className='link'>Pages</Link>
-            <ul
-              className={`submenu ${openSubMenu === 'pages-sub' ? 'open' : ''}`}
-            >
-              {/* <FaCaretUp className='up' /> */}
-              <li>
-                <Link className='submenu-link'>Log in</Link>
-              </li>
-              <li>
-                <Link className='submenu-link'>Cart</Link>
-              </li>
-              <li>
-                <Link className='submenu-link'>Element</Link>
-              </li>
-              <li>
-                <Link className='submenu-link'>Confirmation</Link>
-              </li>
-              <li>
-                <Link className='submenu-link'>Product Checkout</Link>
-              </li>
-            </ul>
-          </li>
           <li>
-            <Link className='link'>Contact</Link>
+            <Link className='link' to='/contact'>
+              Contact
+            </Link>
           </li>
         </ul>
 
         <div className='accounts'>
           <CiSearch className='search icon' />
-          <GoPerson className='person icon' />
+          <Link to='/login'>
+            <GoPerson className='person icon' />
+          </Link>
           <MdOutlineLocalGroceryStore className='shop icon' />
           <div className='hamburger' onClick={toggleMenu}>
             {isOpen ? (

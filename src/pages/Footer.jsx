@@ -1,12 +1,30 @@
-import React from 'react';
 import logo from '../assets/logo.png.webp';
 import { IoLogoTwitter } from 'react-icons/io';
 import { GrFacebookOption } from 'react-icons/gr';
 import { BsBehance } from 'react-icons/bs';
 import { TfiWorld } from 'react-icons/tfi';
+import React, { useState, useEffect } from 'react';
+import { FaArrowTurnUp } from 'react-icons/fa6';
 import '../Styles/Footer.css';
 
 const Footer = () => {
+  const [isFixed, setIsFixed] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 100) {
+        setTimeout(() => setIsFixed(true), 100);
+      } else {
+        setIsFixed(false);
+      }
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
   return (
     <div className='footer'>
       <div className='footer-container'>
@@ -47,12 +65,16 @@ const Footer = () => {
           </p>
         </div>
         <div className='copyright-icons'>
-          <IoLogoTwitter className='icon'/>
-          <GrFacebookOption className='icon'/>
-          <BsBehance className='icon'/>
-          <TfiWorld className='icon'/>
+          <IoLogoTwitter className='icon' />
+          <GrFacebookOption className='icon' />
+          <BsBehance className='icon' />
+          <TfiWorld className='icon' />
         </div>
       </div>
+      <FaArrowTurnUp
+        className={`up-icon ${isFixed ? 'fixed' : ''}`}
+        onClick={scrollToTop}
+      />
     </div>
   );
 };
