@@ -103,7 +103,9 @@ const Navbar = () => {
         </ul>
 
         <div className='accounts'>
-          <CiSearch className='search icon' />
+          <Link to='/search'>
+            <CiSearch className='search icon' />
+          </Link>
           <Link to='/login'>
             <GoPerson className='person icon' />
           </Link>

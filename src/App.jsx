@@ -1,6 +1,6 @@
 import React from 'react';
 import Navbar from './Components/Navbar';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes, useLocation } from 'react-router-dom';
 import Home from './Components/Home';
 import '../src/App.css';
 import Shop from './Components/Shop';
@@ -10,10 +10,15 @@ import ProductList from './pages/ProductList';
 import ProductDetails from './pages/ProductDetails';
 import Contact from './pages/Contact';
 import Login from './pages/Login';
+import Search from './pages/Search';
+
 const App = () => {
+  const location = useLocation();
+  const hideNavFooter = location.pathname === '/search';
+
   return (
     <div>
-      <Navbar />
+      {!hideNavFooter && <Navbar />}
 
       <Routes>
         <Route path='/' element={<Home />} />
@@ -23,9 +28,10 @@ const App = () => {
         <Route path='/details' element={<ProductDetails />} />
         <Route path='/contact' element={<Contact />} />
         <Route path='/login' element={<Login />} />
+        <Route path='/search' element={<Search />} />
       </Routes>
 
-      <Footer />
+      {!hideNavFooter && <Footer />}
     </div>
   );
 };

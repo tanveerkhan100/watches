@@ -9,10 +9,7 @@ import Video from '../pages/Video';
 import Choice from '../pages/Choice';
 import Advertisement from '../pages/Advertisement';
 
-
 const Home = () => {
-  
-
   return (
     <div className='container'>
       <div className='home'>
@@ -37,7 +34,6 @@ const Home = () => {
       <Video />
       <Choice />
       <Advertisement />
-      
     </div>
   );
 };
