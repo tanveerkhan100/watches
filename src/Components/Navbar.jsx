@@ -38,7 +38,9 @@ const Navbar = () => {
   return (
     <div className={`Navbar ${isSticky ? 'sticky' : ''}`}>
       <nav>
-        <img src={logo} alt='' className='logo' />
+        <Link to="/">
+          <img src={logo} alt='' className='logo' />
+        </Link>
         <ul className={isOpen ? 'nav-links active' : 'nav-links'}>
           <li>
             <Link className='link' to='/' onClick={toggleMenu}>
