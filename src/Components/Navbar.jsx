@@ -29,7 +29,7 @@ const Navbar = () => {
   //  for navbar stickiness
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 400) {
+      if (window.scrollY > 200) {
         setTimeout(() => setIsSticky(true), 100);
       } else {
         setIsSticky(false);
