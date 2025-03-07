@@ -13,9 +13,12 @@ const Navbar = () => {
   const [isSticky, setIsSticky] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const [openSubMenu, setOpenSubMenu] = useState(null);
+  const [active, setActive] = useState('home');
 
-  const toggleMenu = () => {
+  const toggleMenu = (menu, event) => {
+    if (event) event.stopPropagation();
     setIsOpen(!isOpen);
+    setActive(menu);
     setOpenSubMenu(null);
   };
 
@@ -38,28 +41,45 @@ const Navbar = () => {
   return (
     <div className={`Navbar ${isSticky ? 'sticky' : ''}`}>
       <nav>
-        <Link to="/">
+        <Link to='/'>
           <img src={logo} alt='' className='logo' />
         </Link>
         <ul className={isOpen ? 'nav-links active' : 'nav-links'}>
           <li>
-            <Link className='link' to='/' onClick={toggleMenu}>
+            <Link
+              className={`link ${active === 'home' ? 'active' : ''}`}
+              to='/'
+              onClick={() => toggleMenu('home')}
+            >
               Home
             </Link>
           </li>
           <li>
-            <Link className='link' to='/shop' onClick={toggleMenu}>
+            <Link
+              className={`link ${active === 'shop' ? 'active' : ''}`}
+              to='/shop'
+              onClick={() => toggleMenu('shop')}
+            >
               Shop
             </Link>
           </li>
           <li>
-            <Link className='link' onClick={toggleMenu} to='/about'>
+            <Link
+              className={`link ${active === 'about' ? 'active' : ''}`}
+              onClick={() => toggleMenu('about')}
+              to='/about'
+            >
               About
             </Link>
           </li>
           <li className='latest' onClick={() => toggleSubMenu('latest')}>
             <p className='hot'>HOT</p>
-            <Link className='link'>Latest</Link>
+            <Link
+              className={`link ${active === 'latest' ? 'active' : ''}`}
+              onClick={() => toggleSubMenu('latest')}
+            >
+              Latest
+            </Link>
             <ul className={`submenu ${openSubMenu === 'latest' ? 'open' : ''}`}>
               <FaCaretUp className='up' />
               <li>
@@ -78,7 +98,7 @@ const Navbar = () => {
           {/* its for mobile screen only  */}
           <li
             className='latest-sub'
-            onClick={() => toggleSubMenu('latest-sub')}
+            onClick={(event) => toggleSubMenu('latest-sub', event)}
           >
             <p className='hot'>HOT</p>
             <Link className='link'>Latest</Link>
@@ -89,16 +109,32 @@ const Navbar = () => {
             >
               {/* <FaCaretUp className='up' /> */}
               <li>
-                <Link className='submenu-link'>Product List</Link>
+                <Link
+                  className='submenu-link'
+                  to='/productList'
+                  onClick={() => setIsOpen(false)}
+                >
+                  Product List
+                </Link>
               </li>
               <li>
-                <Link className='submenu-link'>Product Details</Link>
+                <Link
+                  className='submenu-link'
+                  to='/details'
+                  onClick={() => setIsOpen(false)}
+                >
+                  Product Details
+                </Link>
               </li>
             </ul>
           </li>
 
           <li>
-            <Link className='link' to='/contact'>
+            <Link
+              className={`link ${active === 'contact' ? 'active' : ''}`}
+              to='/contact'
+              onClick={() => toggleMenu('contact')}
+            >
               Contact
             </Link>
           </li>

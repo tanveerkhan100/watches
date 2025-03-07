@@ -11,6 +11,7 @@ import ProductDetails from './pages/ProductDetails';
 import Contact from './pages/Contact';
 import Login from './pages/Login';
 import Search from './pages/Search';
+import ScrollToTop from './pages/ScrollToTop';
 
 const App = () => {
   const location = useLocation();
@@ -18,6 +19,7 @@ const App = () => {
 
   return (
     <div>
+      <ScrollToTop />
       {!hideNavFooter && <Navbar />}
 
       <Routes>

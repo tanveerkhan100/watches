@@ -108,18 +108,29 @@
 }
 
 @media screen and (max-width: 812px) {
+  .video-container img {
+    height: 300px;
+  }
+
+  .play-icon {
+    top: 16%;
+    left: 40%;
+    padding: 23px 20px 20px 24px;
+    font-size: 5rem;
+  }
+
   .next-btn button {
-    width: 15rem;
-    height: 5rem;
-    padding-left: 1rem;
+    width: 13rem;
+    height: 4rem;
+    padding-left: 0.5rem;
   }
   .next-btn {
     width: 16rem;
-    bottom: 5.25rem;
+    bottom: 4.25rem;
   }
   .next-btn .icon {
-    right: 20%;
-    top: 32%;
+    right: 25%;
+    top: 30%;
   }
   .modal-overlay {
     height: 130px;

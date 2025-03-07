@@ -20,12 +20,12 @@
 }
 
 .close-search {
-  color: #fff;
+  color: #999;
   position: absolute;
   top: 50px;
   left: 50%;
   font-size: 45px;
-  border: 1px solid #fff;
+  border: 1px solid #999;
   border-radius: 30px;
   cursor: pointer;
   padding: 5px;

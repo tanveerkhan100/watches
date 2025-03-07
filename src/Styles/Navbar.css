@@ -37,7 +37,8 @@ nav {
   color: #000;
   font-size: 17px;
 }
-.nav-links li .link:hover {
+.nav-links li .link:hover,
+.nav-links li .active {
   color: red;
   transition: 0.5s;
 }
@@ -94,6 +95,7 @@ nav {
 .submenu-link {
   padding: 20px 3px;
   text-decoration: none;
+  cursor: pointer;
   font-weight: 500;
   color: #000;
   font-size: 17px;

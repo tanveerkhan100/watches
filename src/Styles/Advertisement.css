@@ -9,6 +9,7 @@
 
 .ad-box {
   margin: 35px 15px 25px 42px;
+  width: 305px;
 }
 
 .ad-icon {
@@ -57,7 +58,7 @@
 
 @media screen and (max-width: 812px) {
   .ad-container {
-    margin: 5rem 1rem 5rem 1rem;
+    margin: 5rem 2rem 5rem 2rem;
     gap: 10px;
     flex-wrap: wrap;
   }
