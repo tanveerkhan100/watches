@@ -36,12 +36,23 @@
 .hero-text {
   padding: 0 0 0 10rem;
 }
+@keyframes slideInFromLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
 
-h1 {
+.hero-text h1 {
   font-size: 6.8rem;
   color: #0f0033;
   line-height: 8rem;
   font-weight: 900;
+  animation: slideInFromLeft 0.9s ease-out;
 }
 h2 {
   font-size: 3.3rem;
@@ -55,6 +66,7 @@ h2 {
   font-weight: 500;
   font-size: 17px;
   margin: 3rem 0px;
+  animation: slideInFromLeft 1.2s ease-out;
 }
 
 .home-btn {
@@ -71,6 +83,7 @@ h2 {
   background-position: right bottom;
   transition: all 0.5s ease-out;
   cursor: pointer;
+  animation: slideInFromLeft 1s ease-out;
 }
 .home-btn:hover {
   background-position: left bottom;
@@ -143,7 +156,7 @@ h2 {
   .hero-text {
     padding: 4rem 1rem;
   }
-  h1 {
+  .hero-text h1 {
     font-size: 2.5rem;
     text-align: center;
     line-height: 2.9rem;
